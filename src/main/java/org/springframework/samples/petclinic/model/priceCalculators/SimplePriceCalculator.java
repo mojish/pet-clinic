@@ -10,7 +10,7 @@ public class SimplePriceCalculator implements PriceCalculator {
     private static final double BASE_RARE_COEF = 1.2;
 
     @Override
-    public double calcPrice(List<Pet> pets, double baseCharge, double basePricePerPet, UserType userType) {
+		public double calcPrice(List<Pet> pets, double baseCharge, double basePricePerPet, UserType userType) {
         double totalPrice = baseCharge;
 
         for (int i=0; i<pets.size(); i++) {
