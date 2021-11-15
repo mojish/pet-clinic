@@ -49,6 +49,7 @@ public class CustomerDependentPriceCalculatorTest {
 		Mockito.doReturn(false).when(mockPetType2).getRare();
 		double calculatedPrice = customerDependentPriceCalculator.calcPrice(Arrays.asList(dummyPet1, dummyPet2,
 			dummyPet3, dummyPet4), 1000, 1000, UserType.GOLD);
+		Assertions.assertEquals(5064, calculatedPrice);
 	}
 
 	@Test
@@ -57,6 +58,7 @@ public class CustomerDependentPriceCalculatorTest {
 		Mockito.doReturn(false).when(mockPetType2).getRare();
 		double calculatedPrice = customerDependentPriceCalculator.calcPrice(Arrays.asList(dummyPet1, dummyPet2,
 			dummyPet3, dummyPet4), 1000, 1000, UserType.NEW);
+		Assertions.assertEquals(5080, calculatedPrice);
 	}
 
 	@Test
@@ -64,6 +66,7 @@ public class CustomerDependentPriceCalculatorTest {
 		Mockito.doReturn(true).when(mockPetType1).getRare();
 		double calculatedPrice = customerDependentPriceCalculator.calcPrice(Arrays.asList(dummyPet1, dummyPet1,
 			dummyPet1, dummyPet1, dummyPet1), 1000, 1000, UserType.NEW);
+		Assertions.assertEquals(8980, calculatedPrice);
 	}
 
 	@Test
@@ -71,5 +74,6 @@ public class CustomerDependentPriceCalculatorTest {
 		Mockito.doReturn(true).when(mockPetType1).getRare();
 		double calculatedPrice = customerDependentPriceCalculator.calcPrice(Arrays.asList(dummyPet1, dummyPet1,
 			dummyPet1, dummyPet1, dummyPet1), 1000, 1000, UserType.GOLD);
+		Assertions.assertEquals(7520, calculatedPrice);
 	}
 }
