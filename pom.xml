@@ -139,7 +139,7 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>com.github.mryf32</groupId>
+      <groupId>com.github.mryf323</groupId>
       <artifactId>tractatus</artifactId>
       <version>1.0.4</version>
     </dependency>
