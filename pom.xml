@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
@@ -87,12 +87,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-        <exclusions>
-            <exclusion>
-                <groupId>org.junit.vintage</groupId>
-                <artifactId>junit-vintage-engine</artifactId>
-            </exclusion>
-        </exclusions>
+      <exclusions>
+        <exclusion>
+          <groupId>org.junit.vintage</groupId>
+          <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Databases - Uses H2 by default -->
@@ -150,12 +150,12 @@
       <artifactId>mockito-junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.mockito</groupId>-->
-<!--      <artifactId>mockito-all</artifactId>-->
-<!--      <version>1.10.19</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.mockito</groupId>-->
+    <!--      <artifactId>mockito-all</artifactId>-->
+    <!--      <version>1.10.19</version>-->
+    <!--      <scope>test</scope>-->
+    <!--    </dependency>-->
 
 
     <dependency>
@@ -178,12 +178,12 @@
         <artifactId>spring-javaformat-maven-plugin</artifactId>
         <version>${spring-format.version}</version>
         <executions>
-<!--          <execution>-->
-<!--            <phase>validate</phase>-->
-<!--            <goals>-->
-<!--              <goal>validate</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
+          <!--          <execution>-->
+          <!--            <phase>validate</phase>-->
+          <!--            <goals>-->
+          <!--              <goal>validate</goal>-->
+          <!--            </goals>-->
+          <!--          </execution>-->
         </executions>
       </plugin>
       <plugin>
@@ -203,22 +203,22 @@
           </dependency>
         </dependencies>
         <executions>
-<!--          todo correct the style violations-->
-<!--          <execution>-->
-<!--            <id>nohttp-checkstyle-validation</id>-->
-<!--            <phase>validate</phase>-->
-<!--            <configuration>-->
-<!--              <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>-->
-<!--              <suppressionsLocation>src/checkstyle/nohttp-checkstyle-suppressions.xml</suppressionsLocation>-->
-<!--              <encoding>UTF-8</encoding>-->
-<!--              <sourceDirectories>${basedir}</sourceDirectories>-->
-<!--              <includes>**/*</includes>-->
-<!--              <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>-->
-<!--            </configuration>-->
-<!--            <goals>-->
-<!--              <goal>check</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
+          <!--          todo correct the style violations-->
+          <!--          <execution>-->
+          <!--            <id>nohttp-checkstyle-validation</id>-->
+          <!--            <phase>validate</phase>-->
+          <!--            <configuration>-->
+          <!--              <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>-->
+          <!--              <suppressionsLocation>src/checkstyle/nohttp-checkstyle-suppressions.xml</suppressionsLocation>-->
+          <!--              <encoding>UTF-8</encoding>-->
+          <!--              <sourceDirectories>${basedir}</sourceDirectories>-->
+          <!--              <includes>**/*</includes>-->
+          <!--              <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>-->
+          <!--            </configuration>-->
+          <!--            <goals>-->
+          <!--              <goal>check</goal>-->
+          <!--            </goals>-->
+          <!--          </execution>-->
         </executions>
       </plugin>
       <plugin>
@@ -245,13 +245,12 @@
       <plugin>
         <groupId>org.pitest</groupId>
         <artifactId>pitest-maven</artifactId>
-        <version>${pitest.version}</version>
         <configuration>
           <targetClasses>
-            <param>org.springframework.samples.petclinic.owner.VisitController</param>
+            <param>org.springframework.samples.petclinic.utility.PriceCalculator</param>
           </targetClasses>
           <targetTests>
-            <param>org.springframework.samples.petclinic.owner.VisitControllerTests</param>
+            <param>org.springframework.samples.petclinic.utility.PriceCalculatorTest</param>
           </targetTests>
           <mutators>
             <mutator>ROR</mutator>
